@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modal</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            position:relative;
+            width:100vw;
+            height:100vh;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background: url('https://www.colegiosantoantonio.com.br/wp-content/uploads/2018/01/old-white-background.jpg') no-repeat center center/cover;
+            background-attachment: fixed;
+            overflow:hidden;
+        }
+        #modal-option{
+            width:30%;
+            margin:0 auto;
+            padding:3rem 4rem;
+            background-color: rebeccapurple;
+            color:white;
+            border-radius: 7px;
+            display:flex;
+            flex-direction:column;
+            justify-content: center;
+        }
+        #btn1{
+            color:white;
+            padding:0.4rem 0.7rem;
+            background-color: forestgreen;
+            border:none ;
+            border-radius: 5px;
+            width:40%;
+            margin:1rem auto;
+        }
+        #btn2{
+            color:white;
+            padding:0.4rem 0.7rem;
+            background-color: forestgreen;
+            border:none ;
+            border-radius: 5px;
+            width:40px;
+        }
+
+        #btn1:hover,#btn2:hover{
+            background-color: green;
+        }
+
+        #modal{
+            width:60%;
+            margin:0 auto;
+            padding:1rem;
+            background-color: #ddd;
+            border-radius: 7px;
+            display:flex;
+            flex-direction:column;
+            justify-content: center;
+        }
+        .btn-div{
+            display: flex;
+            justify-content: end;
+        }
+        .black-cont{
+            position: absolute;
+            top:-5px;
+            left:-5px;
+            width:101vw;
+            height:101vh;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0,0,0,0.8);
+            transition: 0.3s;
+            overflow:hidden;
+            transform: scale(0);
+            border-radius:15px;
+        }
+        .show{
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body>
+    <div id="modal-option">
+        <h1>Modal clicky!</h1>
+        <button id="btn1">click me!</button>
+    </div>
+
+    <div class="black-cont">
+    <div id="modal">
+        <div class="btn-div">
+            <button id="btn2">X</button>
+        </div>
+        <div style="margin:2rem">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa aut distinctio tenetur voluptas! Reprehenderit error ratione laborum fuga cum quasi rem ipsam voluptatibus. Illo minus accusamus optio ab cumque exercitationem necessitatibus recusandae inventore, soluta saepe minima, deleniti alias obcaecati quis!
+        </div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
